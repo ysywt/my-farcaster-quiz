@@ -43,12 +43,12 @@ async function handleFrameRequest(req: NextRequest): Promise<Response> {
           <title>猜谜语 Frame</title>
           <meta property="fc:frame" content="vNext" />
 
-          <meta property="fc:frame:image" content="${HOST}/api/frame-quiz/image?text=${encodeURIComponent(imageText)}&bg=${encodeURIComponent(bgColor)}" />
+          <meta property="fc:frame:image" content="${HOST}/api/frame-quiz/image/route.ts?text=${encodeURIComponent(imageText)}&bg=${encodeURIComponent(bgColor)}" />
 
           <meta property="fc:frame:button:1" content="${buttonText}" />
           <meta property="fc:frame:button:1:action" content="post" />
 
-          <meta property="fc:frame:post_url" content="${HOST}/api/frame-quiz?state=${nextState}" />
+          <meta property="fc:frame:post_url" content="${HOST}/api/frame-quiz/route.ts?state=${nextState}" />
         </head>
         <body>
           <h1>Frame is ready.</h1> 

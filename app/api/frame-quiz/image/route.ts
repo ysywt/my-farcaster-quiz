@@ -1,8 +1,12 @@
-import { ImageResponse } from '@vercel/og'; 
+import { ImageResponse } from 'next/og'; // 针对 Next.js 14.2+ 的官方推荐导入
 import { NextRequest } from 'next/server';
 
+// 必须设置为 'edge' 才能使用 ImageResponse
 export const runtime = 'edge'; 
 
+/**
+ * 动态生成 Frame 图片的函数
+ */
 function FrameImage(text: string, bgColor: string) {
   return new ImageResponse(
     (
@@ -33,6 +37,9 @@ function FrameImage(text: string, bgColor: string) {
   );
 }
 
+/**
+ * GET 路由处理图片请求
+ */
 export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
     const text = searchParams.get('text') || '加载中...';

@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/frame-quiz",
+      "destination": "/api/frame-quiz/route.ts"
+    },
+    {
+      "source": "/api/frame-quiz/image",
+      "destination": "/api/frame-quiz/image/route.ts"
+    }
+  ]
+}
