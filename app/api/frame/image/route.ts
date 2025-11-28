@@ -7,10 +7,9 @@ function FrameImage(text: string, bgColor: string) {
   return new ImageResponse(
     (
       <div
-        style={{ // <-- 修正后，使用正确的 style={{...}} 语法
+        style={{
           fontSize: 60,
           color: 'white',
-          // ...
           background: bgColor,
           width: '100%',
           height: '100%',
